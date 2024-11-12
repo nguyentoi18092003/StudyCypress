@@ -1,0 +1,26 @@
+{
+  "name": "project-cypress-youtube",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:mocha-reporter": "cypress run --reporter mochawesome --reporter-options reportDir=results,overwrite=false,html=false,json=true",
+    "merge-report": "mochawesome-merge results/*.json > mochawesome.json",
+    "build-report": "marge mochawesome.json",
+    "clean-reports": "rimraf results mochawesome.json",
+    "test:full-report": "npm run clean-reports && npm run test:mocha-reporter && npm run merge-report && npm run build-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.15.2",
+    "rimraf": "^6.0.1"
+  },
+  "dependencies": {
+    "marge": "^1.0.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0"
+  }
+}
