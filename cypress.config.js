@@ -9,7 +9,9 @@ module.exports = defineConfig({
     projectId:"sdetpro",
     specPattern:"./cypress/tests/*/*",
     reporter:"mochawesome",
-    baseUrl:"https://www.demoblaze.com/"
+    baseUrl:"https://www.demoblaze.com/",
+    screenshotOnRunFailure: true,
+    screenshotsFolder: "./screenshots"
   },
   defaultCommandTimeout:10000
 

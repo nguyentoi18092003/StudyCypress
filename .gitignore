@@ -1,4 +1,4 @@
 node_modules/
 results/
 mochawesome-report/
-cypress/screenshots/
+screenshots/
